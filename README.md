@@ -11,7 +11,7 @@ nomad academy의 우버 강의를 보고 기록한 저장소 입니다.
 
 ---
 
-### Server note
+### Back-End note
 
 **미들웨어(middleware)**
 
@@ -26,7 +26,11 @@ nomad academy의 우버 강의를 보고 기록한 저장소 입니다.
 
 - helmet은 보안을 위한 **미들웨어**이며, 요청 때마다 미들웨어가 요청을 잠시 멈추고 검사한 후에 위험하지 않다고 판단되면 요청을 계속 진행시키는 라이브러리
 
-\*\*[TypeORM](https://github.com/typeorm/typeorm)
+**[TypeORM](https://github.com/typeorm/typeorm)**
 
 - 복잡한 데이터베이스(SQL)언어의 작업을 ORM(Object Relational Mapper)를 사용함으로써 SQL언어로 바꿔주는 라이브러리
 - TypeORM은 Typescript로 만들어 졌으며 Typescript로 개발하는 환경에 적합해 보인다.
+
+**Issue**
+
+- npm bcrypt 설치시 오류 발생 할 경우 node 버전을 확인 하고 Current버전 이라면 삭제 후 LTS 버전으로 재설치.
