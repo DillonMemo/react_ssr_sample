@@ -11,7 +11,46 @@ nomad academy의 우버 강의를 보고 기록한 저장소 입니다.
 
 ---
 
-### Back-End note
+## Resolvers
+
+### Public Resolvers:
+
+- [ ] Sing In / Sing Up with Facebook
+- [ ] Sing In with Email
+- [ ] Start phone number verification
+- [ ] Complete phone number verification
+- [ ] Sign Up with Email
+
+---
+
+### Private Resolvers:
+
+- [ ] Verify Email
+- [ ] Get my profile
+- [ ] Update my profile
+- [ ] Toggle driving mode
+- [ ] Report location / orientation
+- [ ] Add place
+- [ ] Update place
+- [ ] Delete place
+- [ ] See nearby drivers
+- [ ] Subscribe to nearby drivers
+- [ ] Request a Ride
+- [ ] Get nearby rides
+- [ ] Subscribe to nearby ride requests
+- [ ] Subscribe to ride status
+- [ ] Get chat room messages
+- [ ] Subscribe to chat room messages
+- [ ] Send a chat message
+
+---
+
+## Code Challenge
+
+- [ ] Get ride history
+- [ ] See ride detail
+
+## Back-End note
 
 **미들웨어(middleware)**
 
@@ -30,6 +69,16 @@ nomad academy의 우버 강의를 보고 기록한 저장소 입니다.
 
 - 복잡한 데이터베이스(SQL)언어의 작업을 ORM(Object Relational Mapper)를 사용함으로써 SQL언어로 바꿔주는 라이브러리
 - TypeORM은 Typescript로 만들어 졌으며 Typescript로 개발하는 환경에 적합해 보인다.
+
+**순서도**
+
+- GraphQL파일(.graphql) 생성
+  - type 지정
+- Entiti파일(.ts) 생성
+  - @PrimaryGeneratedColumn - 기본키 컬럼 생성
+  - @Column - 컬럼 생성
+  - @ManyToOne | @OneToMany - Relationship(관계도) 구성
+  - @CreateDateColumn | @UpdateDateColumn - 날짜형 컬럼 생성
 
 **Issue**
 
