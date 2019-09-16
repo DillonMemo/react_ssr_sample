@@ -18,7 +18,7 @@ nomad academy의 우버 강의를 보고 기록한 저장소 입니다.
 > 앱의 연결이나 요청들을 다루는 방식을 수정
 > 예를 들어, 모든 요청을 콘솔에 로깅(기록)하는 미들웨어를 만들고 싶어 우리의 앱에 일어나는 모든 행동을들을 콘솔에 기록 하게 되는데 누군가가 우리 앱의 API로 무언가를 할 때마다, 이 미들웨어가 요청을 가로채서 기록하고, 다음 단계로 진행 되도록 함.
 
-**[raphql-yoga](https://github.com/prisma/graphql-yoga)**
+**[graphql-yoga](https://github.com/prisma/graphql-yoga)**
 
 - subscription, tools, graphql playground등을 빠르게 설정 할 수 있도록 도와주는 라이브러리
 
