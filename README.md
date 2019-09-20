@@ -21,8 +21,6 @@ nomad academy의 우버 강의를 보고 기록한 저장소 입니다.
 - [ ] Complete phone number verification
 - [ ] Sign Up with Email
 
----
-
 ### Private Resolvers:
 
 - [ ] Verify Email
@@ -43,12 +41,12 @@ nomad academy의 우버 강의를 보고 기록한 저장소 입니다.
 - [ ] Subscribe to chat room messages
 - [ ] Send a chat message
 
----
-
 ## Code Challenge
 
 - [ ] Get ride history
 - [ ] See ride detail
+
+---
 
 ## Back-End note
 
@@ -72,13 +70,15 @@ nomad academy의 우버 강의를 보고 기록한 저장소 입니다.
 
 **순서도**
 
-- GraphQL파일(.graphql) 생성
+- GraphQL파일(\*.graphql) 생성
   - type 지정
-- Entiti파일(.ts) 생성
+- Entiti파일(\*.ts) 생성
   - @PrimaryGeneratedColumn - 기본키 컬럼 생성
   - @Column - 컬럼 생성
   - @ManyToOne | @OneToMany - Relationship(관계도) 구성
   - @CreateDateColumn | @UpdateDateColumn - 날짜형 컬럼 생성
+- Resolvers파일(\*.resolvers.ts) 생성
+  - Mutation process 처리
 
 **Issue**
 
