@@ -15,11 +15,16 @@ nomad academy의 우버 강의를 보고 기록한 저장소 입니다.
 
 ### Public Resolvers:
 
-- [ ] Sing In / Sing Up with Facebook
-- [ ] Sing In with Email
-- [ ] Start phone number verification
-- [ ] Complete phone number verification
+- [x] Sing In / Sing Up with Facebook
+- [x] Sing In with Email
+- [x] Start phone number verification
+- [x] Complete phone number verification
 - [ ] Sign Up with Email
+
+### Authentication:
+
+- [ ] Generate JWT(JSON Web Token)
+- [ ] Verify JWT(JSON Web Token)
 
 ### Private Resolvers:
 

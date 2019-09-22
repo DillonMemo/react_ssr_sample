@@ -5,11 +5,9 @@ import {
   Column,
   CreateDateColumn,
   UpdateDateColumn,
-  BeforeInsert,
-  ManyToOne
+  BeforeInsert
 } from "typeorm";
 import { verificationTaret } from "src/types/types";
-import User from "./User";
 
 const PHONE = "PHONE";
 const EMAIL = "EMAIL";
@@ -22,6 +20,7 @@ class Verification extends BaseEntity {
   @Column({ type: "text", enum: [PHONE, EMAIL] })
   target: verificationTaret;
 
+  // 핸드폰 번호
   @Column({ type: "text" })
   payload: string;
 
@@ -29,10 +28,7 @@ class Verification extends BaseEntity {
   key: string;
 
   @Column({ type: "boolean", default: false })
-  used: boolean;
-
-  @ManyToOne(type => User, user => user.verifications)
-  user: User;
+  verified: boolean;
 
   @CreateDateColumn()
   createdAt: string;

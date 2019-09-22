@@ -20,7 +20,7 @@ const resolvers: Resolvers = {
           return {
             ok: true,
             error: null,
-            token: "Comming soon"
+            token: "Comming soon, already"
           };
         }
       } catch (error) {
@@ -31,6 +31,7 @@ const resolvers: Resolvers = {
         };
       }
 
+      // facebook ID가 없다면 유저 생성
       try {
         await User.create({
           ...args,
@@ -40,7 +41,7 @@ const resolvers: Resolvers = {
         return {
           ok: true,
           error: null,
-          token: "Comming soon"
+          token: "Comming soon, created"
         };
       } catch (error) {
         return {
