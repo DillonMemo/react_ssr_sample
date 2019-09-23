@@ -88,3 +88,10 @@ nomad academy의 우버 강의를 보고 기록한 저장소 입니다.
 **Issue**
 
 - npm bcrypt 설치시 오류 발생 할 경우 node 버전을 확인 하고 Current버전 이라면 삭제 후 LTS 버전으로 재설치.
+
+## Front-End note
+
+**[apollo-boost](https://www.npmjs.com/package/apollo-boost)**
+
+- apollo는 GraphQL과 커뮤니케이션을 하는 클라이언트.
+- GraphQL-yoga를 back-end에서 사용 한다면 apollo-boost는 Redux처럼 front-end에서 사용 되는 클라이언트.
