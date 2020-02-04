@@ -17,6 +17,7 @@
     "@types/helmet": "0.0.45",
     "@types/morgan": "^1.7.37",
     "@types/node": "^13.7.0",
+    "babel-runtime": "^6.26.0",
     "gql-merge": "0.0.6",
     "graphql-to-typescript": "^0.1.2",
     "nodemon": "^2.0.2",
@@ -25,10 +26,14 @@
     "typescript": "^3.7.5"
   },
   "dependencies": {
+    "class-validator": "^0.11.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "graphql-yoga": "^1.18.3",
     "helmet": "^3.21.2",
     "merge-graphql-schemas": "^1.7.6",
-    "morgan": "^1.9.1"
+    "morgan": "^1.9.1",
+    "pg": "^7.18.1",
+    "typeorm": "^0.2.22"
   }
 }
