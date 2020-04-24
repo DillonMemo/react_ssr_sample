@@ -1,0 +1,64 @@
+{
+  "name": "react_ssr_sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc --init",
+    "start": "npm run build:dev && node ./dist/server.js",
+    "build:dev": "rm -rf dist/ && npm run build:client && npm run build:server",
+    "build:client": "webpack --progress --profile --colors --config webpack.client.js",
+    "build:server": "webpack --progress --profile --colors --config webpack.server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DillonMemo/react_ssr_sample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DillonMemo/react_ssr_sample/issues"
+  },
+  "homepage": "https://github.com/DillonMemo/react_ssr_sample#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.6",
+    "@types/loadable__component": "^5.10.0",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "@types/react-helmet": "^5.0.15",
+    "@types/react-router-dom": "^5.1.4",
+    "@types/webpack-dev-middleware": "^3.7.0",
+    "@types/webpack-env": "^1.15.2",
+    "@types/webpack-hot-middleware": "^2.25.2",
+    "@types/webpack-node-externals": "^1.7.1",
+    "babel-loader": "^8.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "html-webpack-plugin": "^4.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "ts-loader": "^7.0.1",
+    "tslint": "^6.1.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@loadable/component": "^5.12.0",
+    "express": "^4.17.1",
+    "react-helmet": "^6.0.0",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^5.1.0"
+  }
+}
