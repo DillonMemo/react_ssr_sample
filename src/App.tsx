@@ -1,11 +1,12 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import loadable from "@loadable/component";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Home from "./pages/home/Home";
-import News from "./pages/news/News";
+const Header = loadable(() => import(/* webpackChunkName: "Header" */ "./components/Header"));
+const Footer = loadable(() => import(/* webpackChunkName: "Footer" */ "./components/Footer"));
+const Home = loadable(() => import(/* webpackChunkName: "Home" */ "./pages/home/Home"));
+const News = loadable(() => import(/* webpackChunkName: "News" */ "./pages/news/News"));
 
 export interface AppProps {}
 

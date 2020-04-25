@@ -3,6 +3,7 @@
 code splitting with @loadable/components
 
 createdon : 2020. 04. 24
+modifiyon : 2020. 04. 25
 
 ## 작업일 기준 Version
 
@@ -10,6 +11,8 @@ createdon : 2020. 04. 24
 - react@16.13.1
 - typescript@3.8.3
 - styled-components@5.1.0
+- @types/styled-components@5.1.0
+- typescript-plugin-styled-components
 - @types/react-dom@16.9.6
 - tslint@6.1.1
 - @types/react@16.9.34
@@ -30,6 +33,12 @@ createdon : 2020. 04. 24
 - @types/webpack-env@1.15.2
 - @babel/core@7.9.0
 - @babel/plugin-transform-runtime@7.9.0
+- @loadable/component@5.12.0
+- @types/loadable\_\_component@5.10.0
+- @loadable/webpack-plugin@5.12.0
+- @loadable/babel-plugin@5.12.0
+- @loadable/server@5.12.0
+- @types/loadable\_\_server@5.12.0
 
 ## Setting Guide
 
@@ -55,7 +64,7 @@ root
 
 ```bash
 npm install react react-dom typescript styled-components
-npm install @types/react @types/react-dom tslint --save-dev
+npm install @types/react @types/react-dom @types/styled-components tslint --save-dev
 
 npm install webpack webpack-cli webpack-dev-server html-webpack-plugin babel-loader ts-loader --save-dev
 
@@ -66,6 +75,6 @@ npm install express
 npm install cors webpack-dev-middleware webpack-hot-middleware webpack-node-externals @types/cors @types/express @types/webpack-dev-middleware @types/webpack-hot-middleware @types/webpack-env --save-dev
 
 # code splitting (with loadable/components)
-npm install @loadable/component
-npm install @types/loadable__component --save-dev
+npm install @loadable/component @loadable/server
+npm install @types/loadable__component @loadable/webpack-plugin @loadable/babel-plugin @types/loadable__server typescript-plugin-styled-components --save-dev
 ```

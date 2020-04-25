@@ -1,5 +1,0 @@
-{
-  "presets": ["@babel/preset-react", "@babel/preset-env", "@babel/preset-typescript"],
-  //비동기 가능하도록 환경 세팅
-  "plugins": ["@babel/plugin-transform-runtime"]
-}
