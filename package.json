@@ -62,6 +62,7 @@
   "dependencies": {
     "@loadable/component": "^5.12.0",
     "@loadable/server": "^5.12.0",
+    "axios": "^0.19.2",
     "express": "^4.17.1",
     "react-helmet": "^6.0.0",
     "react-router-dom": "^5.1.2",
