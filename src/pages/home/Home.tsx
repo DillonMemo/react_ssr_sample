@@ -1,18 +1,21 @@
-import React from "react";
-import styled from "styled-components";
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core";
 
 export interface HomeProps {}
 
 const Home: React.FC<HomeProps> = ({}) => {
   return (
-    <div>
-      Home__<RedTxt>Red!!</RedTxt>
+    <div css={divWrapper}>
+      Home__<span>Blue!!</span>
+      PORT : {process.env.PORT}
     </div>
   );
 };
 
-const RedTxt = styled.span`
-  color: red;
+const divWrapper = css`
+  span {
+    color: blue;
+  }
 `;
 
 export default Home;

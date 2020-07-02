@@ -1,12 +1,13 @@
 const path = require("path");
 const webpack = require("webpack");
 const dotenv = require("dotenv");
+dotenv.config();
+const dotenvPlugin = require("dotenv-webpack");
 const nodeExternals = require("webpack-node-externals");
 const LoadablePlugin = require("@loadable/webpack-plugin");
-const createStyledComponentsTransformer = require("typescript-plugin-styled-components").default;
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
 const isDevMode = process.env.NODE_ENV !== "production";
-const styledComponentsTransformer = createStyledComponentsTransformer();
 const hotMiddlewareScript = `webpack-hot-middleware/client?&path=/__webpack_hmr&timeout=20000&reload=true`;
 
 const getEntryPoint = (target) => {
@@ -38,13 +39,14 @@ const config = (target) => ({
           //     presets: ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
           //   },
           // },
+          // {
+          //   loader: "ts-loader",
+          //   options: {
+          //     getCustomTransformers: () => ({ before: [styledComponentsTransformer] }),
+          //   },
+          // },
           "babel-loader",
-          {
-            loader: "ts-loader",
-            options: {
-              getCustomTransformers: () => ({ before: [styledComponentsTransformer] }),
-            },
-          },
+          "ts-loader",
         ],
       },
     ],
@@ -61,13 +63,17 @@ const config = (target) => ({
   },
   plugins:
     target === "web"
-      ? [new LoadablePlugin(), new webpack.HotModuleReplacementPlugin()]
-      : [new LoadablePlugin()],
+      ? [
+          new LoadablePlugin(),
+          new dotenvPlugin(),
+          new webpack.HotModuleReplacementPlugin(),
+          new BundleAnalyzerPlugin({ analyzerMode: "static", openAnalyzer: false }),
+        ]
+      : [new LoadablePlugin(), new dotenvPlugin()],
   externals: target === "node" ? ["@loadable/component", nodeExternals()] : undefined,
 });
 
 module.exports = () => {
-  dotenv.config();
   console.log("client :", config("web"), config("node"));
   return [config("web"), config("node")];
 };

@@ -2,10 +2,15 @@ import { hydrate } from "react-dom";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { loadableReady } from "@loadable/component";
+import createCache from "@emotion/cache";
+import { CacheProvider } from "@emotion/core";
 
 import App from "./App";
 
 const rootElement = document.getElementById("root");
+
+/** emotion */
+const cache = createCache();
 
 // ReactDOM.render(
 //   <BrowserRouter>
@@ -17,7 +22,9 @@ const rootElement = document.getElementById("root");
 loadableReady(() =>
   hydrate(
     <BrowserRouter>
-      <App />
+      <CacheProvider value={cache}>
+        <App />
+      </CacheProvider>
     </BrowserRouter>,
     rootElement
   )

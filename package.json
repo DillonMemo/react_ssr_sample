@@ -6,7 +6,8 @@
   "scripts": {
     "tsc": "tsc --init",
     "start": "npm run build:dev && node ./dist/server.js",
-    "build:dev": "rm -rf dist/ && npm run build:client && npm run build:server",
+    "build:dev": "npm run build:clear && npm run build:client && npm run build:server",
+    "build:clear": "rm -rf dist/node && rm -rf dist/web && rm -rf dist/server.js",
     "build:client": "webpack --progress --profile --colors --config webpack.client.js",
     "build:server": "webpack --progress --profile --colors --config webpack.server.js"
   },
@@ -37,7 +38,6 @@
     "@types/react-dom": "^16.9.6",
     "@types/react-helmet": "^5.0.15",
     "@types/react-router-dom": "^5.1.4",
-    "@types/styled-components": "^5.1.0",
     "@types/webpack-dev-middleware": "^3.7.0",
     "@types/webpack-env": "^1.15.2",
     "@types/webpack-hot-middleware": "^2.25.2",
@@ -45,14 +45,15 @@
     "babel-loader": "^8.1.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
+    "dotenv-webpack": "^1.8.0",
     "html-webpack-plugin": "^4.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "ts-loader": "^7.0.1",
     "tslint": "^6.1.1",
     "typescript": "^3.8.3",
-    "typescript-plugin-styled-components": "^1.4.4",
     "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^3.8.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.10.3",
@@ -60,12 +61,13 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
+    "@emotion/cache": "^10.0.29",
+    "@emotion/core": "^10.0.28",
     "@loadable/component": "^5.12.0",
     "@loadable/server": "^5.12.0",
-    "axios": "^0.19.2",
+    "create-emotion-server": "^10.0.27",
     "express": "^4.17.1",
     "react-helmet": "^6.0.0",
-    "react-router-dom": "^5.1.2",
-    "styled-components": "^5.1.0"
+    "react-router-dom": "^5.1.2"
   }
 }

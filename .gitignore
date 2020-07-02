@@ -6,7 +6,9 @@ sftp-config.json
 /_backup
 /bower_components
 /build
-/dist
+/dist/node
+/dist/web
+/dist/*.js
 /plugins
 /test
 /upload

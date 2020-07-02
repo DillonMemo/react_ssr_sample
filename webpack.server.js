@@ -1,5 +1,6 @@
 const path = require("path");
 const dotenv = require("dotenv");
+dotenv.config();
 const nodeExternals = require("webpack-node-externals");
 
 const config = {
@@ -29,7 +30,6 @@ const config = {
 };
 
 module.exports = (env) => {
-  dotenv.config();
   console.log("server :", config);
   return config;
 };

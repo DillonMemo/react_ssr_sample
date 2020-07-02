@@ -10,7 +10,13 @@ import webpackDevMiddleware from "webpack-dev-middleware";
 import webpackHotMiddleware from "webpack-hot-middleware";
 import { ChunkExtractor } from "@loadable/server";
 
-import webpackConfig from "../webpack.client";
+/** set up emotion */
+import { CacheProvider } from "@emotion/core";
+import createEmotionServer from "create-emotion-server";
+import createCache from "@emotion/cache";
+
+const webpackConfig = require("../webpack.client");
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 app.use(cors());
@@ -55,15 +61,22 @@ app.get("*", (req, res) => {
   const webExtractor = new ChunkExtractor({ statsFile: webStats });
   const { default: App } = nodeExtractor.requireEntrypoint();
 
+  // sett up emotion
+  const cache = createCache();
+  const { extractCritical } = createEmotionServer(cache);
+
   const context = {};
 
   const jsx = webExtractor.collectChunks(
     <StaticRouter location={req.url} context={context}>
-      <App />
+      <CacheProvider value={cache}>
+        <App />
+      </CacheProvider>
     </StaticRouter>
   );
 
-  const html = renderToString(jsx);
+  // const html = renderToString(jsx);
+  const { html, css, ids } = extractCritical(renderToString(jsx));
   const helmet = Helmet.renderStatic();
 
   res.set("content-type", "text/html");
@@ -73,9 +86,16 @@ app.get("*", (req, res) => {
         <head>
             <meta name="viewport" content="width=device-width, user-scalable=no">
             <meta name="google" content="notranslate">
-            ${helmet.title.toString()}
+            ${
+              helmet
+                ? `
+                  ${helmet.meta.toString()}
+                  ${helmet.title.toString()}
+                  `
+                : ""
+            }
             ${webExtractor.getLinkTags()}
-            ${webExtractor.getStyleTags()}
+            <style data-emotion-css="${ids.join(" ")}">${css}</style>
         </head>
         <body>
             <div id="root">${html}</div>
@@ -85,4 +105,4 @@ app.get("*", (req, res) => {
     `);
 });
 
-app.listen(3003, () => console.log("Server started http://localhost:3003"));
+app.listen(PORT, () => console.log(`Server started http://localhost:${PORT}`));

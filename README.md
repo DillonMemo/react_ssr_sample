@@ -3,16 +3,16 @@
 code splitting with @loadable/components
 
 createdon : 2020. 04. 24
-modifiyon : 2020. 04. 25
+modifiyon : 2020. 07. 02
 
 ## 작업일 기준 Version
 
 - react-dom@16.13.1
 - react@16.13.1
 - typescript@3.8.3
-- styled-components@5.1.0
-- @types/styled-components@5.1.0
-- typescript-plugin-styled-components
+- @emotion/cache@10.0.29
+- @emotion/core@10.0.28
+- create-emotion-server@10.0.27
 - @types/react-dom@16.9.6
 - tslint@6.1.1
 - @types/react@16.9.34
@@ -63,8 +63,8 @@ root
 #### 설정
 
 ```bash
-npm install react react-dom typescript styled-components
-npm install @types/react @types/react-dom @types/styled-components tslint --save-dev
+npm install react react-dom typescript @emotion/core
+npm install @types/react @types/react-dom tslint --save-dev
 
 npm install webpack webpack-cli webpack-dev-server html-webpack-plugin babel-loader ts-loader --save-dev
 
@@ -76,5 +76,5 @@ npm install cors webpack-dev-middleware webpack-hot-middleware webpack-node-exte
 
 # code splitting (with loadable/components)
 npm install @loadable/component @loadable/server
-npm install @types/loadable__component @loadable/webpack-plugin @loadable/babel-plugin @types/loadable__server typescript-plugin-styled-components --save-dev
+npm install @types/loadable__component @loadable/webpack-plugin @loadable/babel-plugin @types/loadable__server @emotion/cache create-emotion-server --save-dev
 ```
