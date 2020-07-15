@@ -66,10 +66,13 @@ root
 npm install react react-dom typescript @emotion/core
 npm install @types/react @types/react-dom tslint --save-dev
 
-npm install webpack webpack-cli webpack-dev-server html-webpack-plugin babel-loader ts-loader --save-dev
+npm install webpack webpack-cli webpack-dev-server html-webpack-plugin --save-dev
 
 npm install react-router-dom react-helmet
 npm install @types/react-router-dom @types/react-helmet --save-dev
+
+# babel
+npm install babel-loader ts-loader @babel/core @babel/plugin-transform-runtime @babel/preset-env @babel/preset-react @babel/preset-typescript --save-dev
 
 npm install express
 npm install cors webpack-dev-middleware webpack-hot-middleware webpack-node-externals @types/cors @types/express @types/webpack-dev-middleware @types/webpack-hot-middleware @types/webpack-env --save-dev
