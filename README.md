@@ -33,6 +33,7 @@ modifiyon : 2020. 07. 16
 - webpack-cli@3.3.11
 - ts-loader@7.0.1
 - eslint@7.4.0
+- prettier@2.0.5
 - eslint-config-prettier@6.11.0
 - eslint-plugin-prettier@3.1.4
 - eslint-plugin-react@7.20.3
@@ -88,8 +89,8 @@ npm install webpack webpack-cli webpack-dev-server html-webpack-plugin --save-de
 npm install react-router-dom react-helmet
 npm install @types/react-router-dom @types/react-helmet --save-dev
 
-# eslint
-npm i -D dotenv-webpack eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser
+# eslint + prettier + typescript
+npm i -D dotenv-webpack eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser
 
 # babel
 npm install babel-loader ts-loader @babel/core @babel/plugin-transform-runtime @babel/preset-env @babel/preset-react @babel/preset-typescript --save-dev
