@@ -1,3 +1,9 @@
+<div align=center>
+
+![GitHub](https://img.shields.io/github/license/dillonmemo/react_ssr_sample) ![GitHub repo size](https://img.shields.io/github/repo-size/dillonmemo/react_ssr_sample) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FDillonMemo%2Freact_ssr_sample)](https://hits.seeyoufarm.com)
+
+</div>
+
 > Update at 2020. 7. 16
 >
 > 1. [⚠️ TSLint is deprecated.](https://github.com/palantir/tslint)
