@@ -1,9 +1,15 @@
+> Update at 2020. 7. 16
+>
+> 1. [⚠️ TSLint is deprecated.](https://github.com/palantir/tslint)
+> 2. Use EsLint instead of TSLint.
+> 3. Prettier, ESLint, dotenv reconfigure
+
 # React + Typescript + SSR + Code Splitting
 
 code splitting with @loadable/components
 
 createdon : 2020. 04. 24
-modifiyon : 2020. 07. 02
+modifiyon : 2020. 07. 16
 
 ## 작업일 기준 Version
 
@@ -14,13 +20,18 @@ modifiyon : 2020. 07. 02
 - @emotion/core@10.0.28
 - create-emotion-server@10.0.27
 - @types/react-dom@16.9.6
-- tslint@6.1.1
 - @types/react@16.9.34
 - webpack-dev-server@3.10.3
 - babel-loader@8.1.0
 - html-webpack-plugin@4.2.0
 - webpack-cli@3.3.11
 - ts-loader@7.0.1
+- eslint@7.4.0
+- eslint-config-prettier@6.11.0
+- eslint-plugin-prettier@3.1.4
+- eslint-plugin-react@7.20.3
+- @typescript-eslint/parser@3.6.1
+- @typescript-eslint/eslint-plugin@3.6.1
 - webpack@4.43.0
 - express@4.17.1
 - webpack-node-externals@1.7.2
@@ -64,12 +75,15 @@ root
 
 ```bash
 npm install react react-dom typescript @emotion/core
-npm install @types/react @types/react-dom tslint --save-dev
+npm install @types/react @types/react-dom --save-dev
 
 npm install webpack webpack-cli webpack-dev-server html-webpack-plugin --save-dev
 
 npm install react-router-dom react-helmet
 npm install @types/react-router-dom @types/react-helmet --save-dev
+
+# eslint
+npm i -D dotenv-webpack eslint eslint-config-prettier eslint-plugin-prettier eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser
 
 # babel
 npm install babel-loader ts-loader @babel/core @babel/plugin-transform-runtime @babel/preset-env @babel/preset-react @babel/preset-typescript --save-dev

@@ -74,6 +74,6 @@ const config = (target) => ({
 });
 
 module.exports = () => {
-  console.log("client :", config("web"), config("node"));
+  console.log("client :", process.env.NODE_ENV, isDevMode);
   return [config("web"), config("node")];
 };

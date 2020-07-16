@@ -3,8 +3,10 @@ const dotenv = require("dotenv");
 dotenv.config();
 const nodeExternals = require("webpack-node-externals");
 
+const isDevMode = process.env.NODE_ENV !== "production";
+
 const config = {
-  mode: process.env.NODE_ENV === "production" ? "production" : "development",
+  mode: isDevMode ? "development" : "production",
   target: "node",
   node: false,
   entry: {
@@ -30,6 +32,6 @@ const config = {
 };
 
 module.exports = (env) => {
-  console.log("server :", config);
+  console.log("server :", process.env.NODE_ENV, isDevMode);
   return config;
 };
