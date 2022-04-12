@@ -6,7 +6,7 @@
 
 > Update at 2022. 4. 12
 >
-> Please use Next.js SSR 🙏
+> - Please use Next.js SSR 🙏
 
 > Update at 2020. 7. 16
 >
