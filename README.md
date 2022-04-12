@@ -4,6 +4,10 @@
 
 </div>
 
+> Update at 2022. 4. 12
+>
+> Please use Next.js SSR 🙏
+
 > Update at 2020. 7. 16
 >
 > 1. [⚠️ TSLint is deprecated.](https://github.com/palantir/tslint)
